@@ -16,6 +16,10 @@ public abstract class Funcionario {
         this.dtAdmissao = dtAdmissao;
     }
     
+    public String getCargo(){
+        return(cargo);
+    }
+    
     abstract public double calcSalBruto();
     
     public double calcDesconto(){

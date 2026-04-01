@@ -21,4 +21,8 @@ public class FuncionarioMensalista extends Funcionario {
         this.numSalMin = numSalMin;
     }
     
+    public double calcSalBruto(){
+        return(valSalMin * );
+    }
+    
 }
