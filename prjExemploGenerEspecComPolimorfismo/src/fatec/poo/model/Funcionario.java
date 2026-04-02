@@ -8,7 +8,8 @@ public abstract class Funcionario {
     
     private int registro;
     private String nome;
-    private String dtAdmissao;
+    private String dtAdmissao
+    private Departamento departamento;
     
     public Funcionario(int registro, String nome, String dtAdmissao){
         this.registro = registro;
@@ -29,6 +30,16 @@ public abstract class Funcionario {
     public double calcSalLiquido(){
             return(calcSalBruto() - calcDesconto());
     }
+
+    public Departamento getDepartamento() {
+        return departamento;
+    }
+
+    public void setDepartamento(Departamento departamento) {
+        this.departamento = departamento;
+    }
+    
+    
     
 }
 
