@@ -9,12 +9,9 @@ public class FuncionarioMensalista extends Funcionario {
     private double valSalMin;
     private double numSalMin;
     
-    public FuncionarioMensalista(int registro, String nome, String dtAdmissao, double ){
-        
-    }
-
-    public void setValSalMin(double valSalMin) {
-        this.valSalMin = valSalMin;
+    public FuncionarioMensalista(int registro, String nome, String dtAdmissao, double valSalMin){
+        super(registro, nome, dtAdmissao);
+        this.valSalMin = valSalMin;        
     }
 
     public void setNumSalMin(double numSalMin) {
@@ -22,7 +19,6 @@ public class FuncionarioMensalista extends Funcionario {
     }
     
     public double calcSalBruto(){
-        return(valSalMin * );
+        return(valSalMin * numSalMin);
     }
-    
 }

@@ -22,4 +22,11 @@ public class FuncionarioHorista extends Funcionario {
         this.qtdeHorTrab = qtdeHorTrab;
     }
     
+    public double calcGrafificacao(){
+        return (calcSalBruto() * 0.075);
+    }
+    
+    public double calcSalLiquido(){
+        return (calcSalBruto() - calcGrafificacao());
+    }
 }

@@ -8,8 +8,11 @@ public abstract class Funcionario {
     
     private int registro;
     private String nome;
-    private String dtAdmissao
+    private String dtAdmissao;
+    private String cargo;
+    /*
     private Departamento departamento;
+    */
     
     public Funcionario(int registro, String nome, String dtAdmissao){
         this.registro = registro;
@@ -21,16 +24,21 @@ public abstract class Funcionario {
         return(cargo);
     }
     
-    abstract public double calcSalBruto();
+    public void setCargo(String cargo){
+        this.cargo = cargo;
+    }
+    
+    public abstract double calcSalBruto();
     
     public double calcDesconto(){
         return(0.1 * calcSalBruto());
     }
     
     public double calcSalLiquido(){
-            return(calcSalBruto() - calcDesconto());
+        return(calcSalBruto() - calcDesconto());
     }
 
+    /*
     public Departamento getDepartamento() {
         return departamento;
     }
@@ -38,8 +46,6 @@ public abstract class Funcionario {
     public void setDepartamento(Departamento departamento) {
         this.departamento = departamento;
     }
-    
-    
-    
+    */
 }
 
