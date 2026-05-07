@@ -249,18 +249,27 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Montar Ret&#xe2;ngulo"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnMontarActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btnConsultar">
       <Properties>
         <Property name="text" type="java.lang.String" value="Consultar"/>
         <Property name="enabled" type="boolean" value="false"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnConsultarActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btnSair">
       <Properties>
         <Property name="text" type="java.lang.String" value="Sair"/>
         <Property name="toolTipText" type="java.lang.String" value=""/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSairActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>

@@ -5,6 +5,8 @@
  */
 package fatec.poo.view;
 
+import fatec.poo.model.Retangulo;
+
 /**
  *
  * @author edson.barros
@@ -155,12 +157,27 @@ public class GuiRetangulo extends javax.swing.JFrame {
         );
 
         btnMontar.setText("Montar Retângulo");
+        btnMontar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnMontarActionPerformed(evt);
+            }
+        });
 
         btnConsultar.setText("Consultar");
         btnConsultar.setEnabled(false);
+        btnConsultar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnConsultarActionPerformed(evt);
+            }
+        });
 
         btnSair.setText("Sair");
         btnSair.setToolTipText("");
+        btnSair.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSairActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -206,6 +223,28 @@ public class GuiRetangulo extends javax.swing.JFrame {
     private void txtBaseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtBaseActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtBaseActionPerformed
+
+    private void btnSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSairActionPerformed
+        dispose(); // fecha a gui
+    }//GEN-LAST:event_btnSairActionPerformed
+
+    private void btnMontarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMontarActionPerformed
+        objRet = new Retangulo(txtUnidade.getText());
+        objRet.setAltura(Double.parseDouble(txtAltura.getText()));
+        objRet.setBase(Double.parseDouble(txtBase.getText()));
+        btnMontar.setEnabled(false);
+        btnConsultar.setEnabled(true);
+        txtUnidade.setEnabled(false);
+        txtAltura.setEnabled(false);
+        txtBase.setEnabled(false);
+    }//GEN-LAST:event_btnMontarActionPerformed
+
+    private void btnConsultarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConsultarActionPerformed
+        lblArea.setText(String.valueOf(objRet.calcArea()) + objRet.getUnidadeMedida() + "²");
+        lblPerimetro.setText(String.valueOf(objRet.calcPerimetro()) + objRet.getUnidadeMedida());
+        lblDiagonal.setText(String.valueOf(objRet.calcDiagonal()) + objRet.getUnidadeMedida());
+        btnConsultar.setEnabled(false);
+    }//GEN-LAST:event_btnConsultarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -261,4 +300,8 @@ public class GuiRetangulo extends javax.swing.JFrame {
     private javax.swing.JTextField txtBase;
     private javax.swing.JTextField txtUnidade;
     // End of variables declaration//GEN-END:variables
+
+    private Retangulo objRet;
+    
+    
 }
