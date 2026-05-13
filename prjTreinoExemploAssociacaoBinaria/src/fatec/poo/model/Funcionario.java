@@ -31,6 +31,14 @@ public abstract class Funcionario {
         return cargo;
     }
     
+    public int getRegistro(){
+        return registro;
+    }
+    
+    public String getNome(){
+        return nome;
+    }
+    
     abstract public double calcSalBruto();
     
     public double calcDesconto(){
