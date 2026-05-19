@@ -276,7 +276,7 @@ public class GUIGameShop extends javax.swing.JFrame {
 
     private void btnJogarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnJogarActionPerformed
         
-        if (objGameShop.getSaldo() > 0){
+        if (Integer.parseInt(txtQtdeHoras.getText()) <= objGameShop.getSaldo()){
             
             objGameShop.jogarHoras(Integer.parseInt(txtQtdeHoras.getText()));
         
