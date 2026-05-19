@@ -28,6 +28,10 @@ public class GameShop {
         this.idade = idade;
     }
 
+    public void setTipoGamer(boolean tipoGamer) {
+        this.tipoGamer = tipoGamer;
+    }
+    
     public int getCodigo() {
         return codigo;
     }
